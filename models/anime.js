@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Anime extends Model {
     /**
@@ -28,7 +26,14 @@ module.exports = (sequelize, DataTypes) => {
     seasons: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     image: DataTypes.STRING,
-    watcherId: DataTypes.INTEGER
+    watcherId: {
+      type:DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model:'users',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Anime',

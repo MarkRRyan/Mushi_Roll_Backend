@@ -1,7 +1,7 @@
 'use strict';
 module.exports = {
   async up(queryInterface, Sequelize) {
-    await queryInterface.createTable('animes', {
+    await queryInterface.createTable('anime', {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -26,7 +26,7 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
-      watcherId: {
+      userId: {
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -40,6 +40,6 @@ module.exports = {
     });
   },
   async down(queryInterface, Sequelize) {
-    await queryInterface.dropTable('animes');
+    await queryInterface.dropTable('anime');
   }
 };
