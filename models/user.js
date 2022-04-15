@@ -17,12 +17,12 @@ module.exports = (sequelize, DataTypes) => {
       User.belongsToMany(models.Anime, {
        as: 'watch_list',
        through: models.Watchlist,
-       foreignKey: 'userId' 
+       foreignKey: 'watcherId' 
       })
     }
   }
   User.init({
-    userName: DataTypes.STRING,
+    username: DataTypes.STRING,
     email: DataTypes.STRING,
     password: DataTypes.STRING
   }, {
