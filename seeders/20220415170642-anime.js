@@ -5,7 +5,7 @@ const { User } = require('../models')
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = await User.findAll({ raw:true })
-    const anime = [...Array(7)].map((_) => ({
+    const anime = [{
       title: 'Jujutsu Kaizen',
       releaseDate: 'Oct 2, 2020',
       episodes: 24,
@@ -30,7 +30,7 @@ module.exports = {
     {
       title: 'Hunter x Hunter',
       releaseDate: 'Oct 16, 1999',
-      episdoes: 62,
+      episodes: 62,
       seasons: 1,
       description: 'Gon Freecss is a young boy living on Whale Island. He learns from "Hunter" Kite, that his father, who he was told was dead, is still alive somewhere as a top "Hunter," risking his life to seek unknown items, such as hidden treasures, curiosa, exotic living creatures, etc. Gon decides to become a professional Hunter and leaves the island. To become a Hunter, he must pass the Hunter Examination, where he meets and befriends three other applicants: Kurapika, Leorio and Killua. Can Gon pass this formidable hurdle, the Hunter Examination, to become "the Best Hunter in the World" and eventually meet his father?',
       image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fm.media-amazon.com%2Fimages%2FM%2FMV5BMWY2OTQwNWUtZWUxYy00OGUzLTkxMmYtNzE4ZTI0ZTBlYTU5XkEyXkFqcGdeQXVyMTA3OTEyODI1._V1_UY1200_CR116%2C0%2C630%2C1200_AL_.jpg&f=1&nofb=1',
@@ -41,7 +41,7 @@ module.exports = {
     {
       title: 'Fullemetal Alchemist Brotherhood',
       releaseDate: 'Apr 5, 2009',
-      episode: 64,
+      episodes: 64,
       seasons: 1,
       description: 'Brothers Edward and Alphonse Elric search for the Philsophers Stone, hoping to restore their bodies, which were lost when they attempted to use their alchemy skills to resurrect their deceased mother. Edward, who lost only limbs, joins the State Military, which gives him the freedom to continue the search as he tries to restore his brother, whose soul is tethered to earth by a suit of armor. However, Edward and Alphonse are not the only ones seeking the powerful stone. And as they search, they learn of a plot to transmute the entire country for reasons they cannot comprehend.',
       image: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Fullmetal_Alchemist_Brotherhood_key_visual.png ',
@@ -82,9 +82,9 @@ module.exports = {
       createdAt: new Date(),
       updatedAt: new Date()
     }
-
+  ]
     
-    ))
+  
     await queryInterface.bulkInsert('animes', anime)
   },
 

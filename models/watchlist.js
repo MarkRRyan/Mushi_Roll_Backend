@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Watchlist.init({
-    userId: DataTypes.INTEGER,
+    watcherId: DataTypes.INTEGER,
     animeId: DataTypes.INTEGER
   }, {
     sequelize,

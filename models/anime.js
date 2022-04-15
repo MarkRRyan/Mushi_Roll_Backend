@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       Anime.belongsTo(models.User, {
         as: 'watcher',
         foreignKey: 'watcherId'
-      }),
+      })
       Anime.belongsToMany(models.User, {
         through: models.Watchlist,
         as: 'anime',
