@@ -27,13 +27,13 @@ module.exports = (sequelize, DataTypes) => {
     description: DataTypes.TEXT,
     image: DataTypes.STRING,
     watcherId: {
-      type:DataTypes.INTEGER,
-      onDelete: 'CASCADE',
-      references: {
-        model:'users',
-        key: 'id'
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
       }
-    }
   }, {
     sequelize,
     modelName: 'Anime',

@@ -10,12 +10,12 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       User.hasMany(models.Anime, {
         as: 'watching',
-        foreign: 'watcherId'
+        foreignKey: 'watcherId'
       }),
       User.belongsToMany(models.Anime, {
        as: 'watch_list',
        through: models.Watchlist,
-       foreignKey: 'watcherId' 
+       foreignKey: 'userId' 
       })
     }
   }

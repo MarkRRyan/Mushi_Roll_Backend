@@ -6,10 +6,10 @@ module.exports = {
     
     const users = await User.findAll({ raw:true })
     
-    const anime = await Anime.findAll({ })
-    console.log(users)
-    const watchlists = anime.map((a) => ({
-      watcherId: users[Math.floor(Math.random() * users.length)].id,
+    const animelist = await Anime.findAll({ raw: true })
+    
+    const watchlists = animelist.map((a) => ({
+      userId: users[Math.floor(Math.random() * users.length)].id,
       animeId: a.id,
       createdAt: new Date(),
       updatedAt: new Date()

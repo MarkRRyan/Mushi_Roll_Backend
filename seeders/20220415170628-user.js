@@ -1,13 +1,13 @@
 'use strict';
-const faker = require('faker');
+const falso = require('@ngneat/falso')
 
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = [...Array(50)].map((_) => ({
-      username: faker.internet.userName(),
-      email: faker.internet.email(),
-      password: faker.internet.password(),
+      username: falso.randUserName(),
+      email: falso.randEmail(),
+      password: falso.randPassword(),
       createdAt: new Date(),
       updatedAt: new Date()
     }))
@@ -18,17 +18,4 @@ module.exports = {
   }
 }
 
-// const falso = require('@ngneat/falso')
-// const users = [...Array(50)].map(() => ({
-//   userName: falso.randFullName(),
-  
-// }))
-// module.exports = {
-//   up: async (queryInterface, Sequelize) => {
-//     return queryInterface.bulkInsert('users', users)
-//   },
 
-//   down: async (queryInterface, Sequelize) => {
-//     return queryInterface.bulkDelete('users')
-//   }
-// }

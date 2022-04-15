@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Watchlist.init({
-    watcherId: {
+    userId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       references: {
@@ -22,16 +22,15 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    articleId: {
+    animeId: {
       type: DataTypes.INTEGER,
       onDelete: 'CASCADE',
       references: {
         model: 'animes',
         key: 'id'
-      }    
+      }
     }
-  },
-   {
+  }, {
     sequelize,
     modelName: 'Watchlist',
     tableName: 'watchlists'
