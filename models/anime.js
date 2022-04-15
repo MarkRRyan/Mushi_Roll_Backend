@@ -28,7 +28,14 @@ module.exports = (sequelize, DataTypes) => {
     seasons: DataTypes.INTEGER,
     description: DataTypes.TEXT,
     image: DataTypes.STRING,
-    watcherId: DataTypes.INTEGER
+    watcherId: {
+        type: DataTypes.INTEGER,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      }
   }, {
     sequelize,
     modelName: 'Anime',
