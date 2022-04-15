@@ -1,24 +1,19 @@
 'use strict';
+const{User, Anime} = require('../models')
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+  up: async (queryInterface, Sequelize) => {
+    const users = await User.findAll({ raw:true })
+    const anime = await Anime.findAll({ raw:true })
+    const watchlists = anime.map((a) => ({
+      userId: users[Math.floor(Math.random() * users.length)].id,
+      animeId: a.id,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    }))
+    await queryInterface.bulkInsert('watchlists', watchlists)
   },
-
-  async down (queryInterface, Sequelize) {
-    /**
-     * Add commands to revert seed here.
-     *
-     * Example:
-     * await queryInterface.bulkDelete('People', null, {});
-     */
+  down: async (queryInterface, Sequelize) => {
+    await queryInterface.bulkDelete('watchlists')
   }
-};
+}
