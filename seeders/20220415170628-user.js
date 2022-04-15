@@ -3,8 +3,8 @@ const faker = require('faker');
 
 
 module.exports = {
-  up:async (queryInterface, Sequelize) => {
-    const users = [...Array(100).map((_) => ({
+  up: async (queryInterface, Sequelize) => {
+    const users = [...Array(50).map((_) => ({
       userName: faker.inernet.userName(),
       email: faker.internet.email(),
       password: faker.internet.password(),
