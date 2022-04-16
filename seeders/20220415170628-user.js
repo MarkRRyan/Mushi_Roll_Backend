@@ -1,7 +1,6 @@
 'use strict';
 const falso = require('@ngneat/falso')
 
-
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = [...Array(50)].map((_) => ({

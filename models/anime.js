@@ -17,6 +17,14 @@ module.exports = (sequelize, DataTypes) => {
         as: 'anime',
         foreignKey: 'animeId'
       })
+      Anime.belongsTo(models.Watchlist, {
+        as:'anime',
+        foreignKey:'watchlistId'
+      })
+      Anime.belongsToMany(models.Watchlist, {
+        as:'anime',
+        foreignKey:'watchlistId'
+      })
     }
   }
   Anime.init({

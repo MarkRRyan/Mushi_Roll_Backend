@@ -16,6 +16,12 @@ module.exports = (sequelize, DataTypes) => {
        as: 'watch_list',
        through: models.Watchlist,
        foreignKey: 'userId' 
+      }),
+      User.hasOne(models.Watchlist, {
+        as:'watcherId',
+        foreignKey: 'watcher',
+        onDelete: 'CASCADE',
+        onUpdate:'CASCADE'
       })
     }
   }
