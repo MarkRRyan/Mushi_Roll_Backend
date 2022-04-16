@@ -1,17 +1,10 @@
 'use strict';
-const { Op } = require('sequelize')
-const falso = require('@ngneat/falso')
-const { user } = require('pg/lib/defaults');
-const { User, Watchlist, sequelize } = require('../models')
+
+const { User } = require('../models')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = await User.findAll({ raw:true })
-    const watchlist = await Watchlist.findAll({
-      order: sequelize.random(),
-      where: { watcherId: { [Op.not]: watcher.id } },
-      raw: true
-    })
     const anime = [{
       title: 'Jujutsu Kaizen',
       releaseDate: 'Oct 2, 2020',

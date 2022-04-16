@@ -10,16 +10,7 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Watchlist.belongsTo(models.User, {
-        foreignKey:'watcherId',
-        as: 'watcher',
-        onDelete:'CASCADE',
-        onUpdate:'CASCADE',
-      })
-      Watchlist.hasMany(models.Anime, {
-        foreignKey: 'watchlistId',
-        as: 'anime'
-      })
+      // define association here
     }
   }
   Watchlist.init({
@@ -46,4 +37,3 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Watchlist;
 };
-

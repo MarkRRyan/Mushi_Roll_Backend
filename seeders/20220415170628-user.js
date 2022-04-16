@@ -1,6 +1,7 @@
 'use strict';
 const falso = require('@ngneat/falso')
 
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     const users = [...Array(50)].map((_) => ({
@@ -16,5 +17,3 @@ module.exports = {
     await queryInterface.bulkDelete('users')
   }
 }
-
-
