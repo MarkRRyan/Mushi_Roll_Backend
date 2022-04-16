@@ -4,8 +4,8 @@
   "description": "test",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "dev": "nodemon server.js",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -26,5 +26,8 @@
     "faker": "^5.5.3",
     "pg": "^8.7.3",
     "sequelize": "^6.19.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }

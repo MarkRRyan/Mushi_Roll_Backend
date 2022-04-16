@@ -1,3 +1,4 @@
+const { TICK_CHAR } = require('sequelize/types/utils')
 const { User, Anime, sequelize } = require('./models')
 const stringify = (data) => {
   console.log(JSON.stringify(data, null, 2))
@@ -52,6 +53,8 @@ const getWatchlist = async () => {
     console.log(error)
   }
 }
+
+
 
 async function main() {
   try {
