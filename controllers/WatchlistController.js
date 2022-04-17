@@ -71,5 +71,5 @@ const GetLists = async (req, res) => {
 
   module.exports = {
       GetLists,
-      CreateWatchlist
+      // CreateWatchlist
   }
