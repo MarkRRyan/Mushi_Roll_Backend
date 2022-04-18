@@ -32,7 +32,11 @@ const UpdateWatchlist = async (req, res) => {
   }
 }
 
+
+
+
 module.exports = {
 	GetWatchlist,
-  UpdateWatchlist
+  UpdateWatchlist,
+  
 }
