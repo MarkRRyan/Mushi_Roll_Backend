@@ -13,7 +13,7 @@ const GetUsers = async (req, res) => {
 
 const GetOneUser = async (req, res) => {
   try {
-    const users = await User.findByPk(1, {
+    const users = await User.findByPk(req.params.me, {
       include: [
         {
           model: Anime,
