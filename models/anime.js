@@ -8,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Anime.belongsTo(models.User, {
-        as: 'watcher',
-        foreignKey: 'watcherId'
-      })
       Anime.belongsToMany(models.User, {
         through: models.Watchlist,
         as: 'anime',
@@ -25,15 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     episodes: DataTypes.INTEGER,
     seasons: DataTypes.INTEGER,
     description: DataTypes.TEXT,
-    image: DataTypes.STRING,
-    watcherId: {
-        type: DataTypes.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'users',
-          key: 'id'
-        }
-      }
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Anime',

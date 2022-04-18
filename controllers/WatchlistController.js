@@ -1,49 +1,38 @@
-const req = require('express/lib/request')
 const res = require('express/lib/response')
-const { User, Anime} = require('../models')
-
-const GetLists = async (req, res) => {
-  //http://localhost:3001/lists/allLists
-    try {
-      const list = await User.findAll({
-        include: [
-          {
-            model: Anime, 
-            as: 'watch_list',
-            through: { attributes: [] }
-          }
-        ]
-      })
-      res.send(list)
-    } catch (error) {
-      console.log(error)
-    }
-  }
+const { User, Anime, Watchlist } = require('../models')
+const Sequelize = require('sequelize')
+const Op = Sequelize.Op
 
 
-const CreateWatchlist = async (req, res) => {
+const GetWatchlist = async (req, res) => {
   try {
-    let anime = await Anime.create({
-      title: req.body.title
-    });
-    let user = await User.findById(req.body.userId)
-    await anime.addUser(user);
-
-    let watchlist = await User.findById(req.body.userId, {
-      include: [{
-        model: Anime,
-        as: 'anime',
-        attributes: []
-      }]
+    const list = await User.findAll({
+      include: [
+        {
+          model: Anime,
+          as: 'watch_list' 
+        }
+      ]
     })
-    res.status(201).send(watchlist)
+    res.send(list)
   } catch (error) {
-    res.status(500).send(error)
+    console.log(error)
   }
 }
 
-
-  module.exports = {
-      GetLists,
-      CreateWatchlist
+const UpdateWatchlist = async (req, res) => {
+  try {
+  await Watchlist.create({
+      userId: req.params.user,
+      animeId: req.params.title
+    })
+    res.send('Watchlist updated with new anime!')
+  } catch (error) {
+    console.log(error)
   }
+}
+
+module.exports = {
+	GetWatchlist,
+  UpdateWatchlist
+}

@@ -8,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      User.hasMany(models.Anime, {
-        as: 'watching',
-        foreignKey: 'watcherId'
-      }),
       User.belongsToMany(models.Anime, {
        as: 'watch_list',
        through: models.Watchlist,
@@ -22,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
   User.init({
     username: DataTypes.STRING,
     email: DataTypes.STRING,
-    password: DataTypes.STRING
+    passwordDigest: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

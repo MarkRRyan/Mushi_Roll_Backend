@@ -10,7 +10,7 @@ module.exports = {
     
     const watchlists = animelist.map((a) => ({
       userId: users[Math.floor(Math.random() * users.length)].id,
-      animeId: a.id,
+      animeId: animelist[Math.floor(Math.random() * animelist.length)].id,
       createdAt: new Date(),
       updatedAt: new Date()
     }))
