@@ -48,8 +48,10 @@ const DeleteWatchlist = async (req, res) => {
 const DeleteAnimeFromWatchlist = async (req, res) => {
   try {
     await Watchlist.destroy({
-
+      where:{animeId: req.params.anime,
+      userId:req.params.user}
     })
+    res.send('Anime deleted from watchlist!')
   } catch (error) {
     console.log(error)
   }
