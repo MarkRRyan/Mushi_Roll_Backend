@@ -34,8 +34,10 @@ const UpdateWatchlist = async (req, res) => {
 
 const DeleteWatchlist = async (req, res) => {
   try {
-    await Watchlist.destroy({
+    await Watchlist.destroy({ 
+      where:{
       userId: req.params.user
+      }
     })
     res.send('Watchlist deleted!')
   } catch (error) {
