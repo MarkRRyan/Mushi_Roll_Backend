@@ -32,11 +32,34 @@ const UpdateWatchlist = async (req, res) => {
   }
 }
 
+const DeleteWatchlist = async (req, res) => {
+  try {
+    await Watchlist.destroy({ 
+      where:{
+      userId: req.params.user
+      }
+    })
+    res.send('Watchlist deleted!')
+  } catch (error) {
+    console.log(error)
+  }
+}
 
-
+const DeleteAnimeFromWatchlist = async (req, res) => {
+  try {
+    await Watchlist.destroy({
+      where:{animeId: req.params.anime,
+      userId:req.params.user}
+    })
+    res.send('Anime deleted from watchlist!')
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 module.exports = {
 	GetWatchlist,
   UpdateWatchlist,
-  
+  DeleteWatchlist,
+  DeleteAnimeFromWatchlist
 }
