@@ -21,53 +21,27 @@ const GetLists = async (req, res) => {
   }
 
 
+const CreateWatchlist = async (req, res) => {
+  try {
+    let anime = await Anime.create({
+      title: req.body.title
+    });
+    let user = await User.findById(req.body.userId)
+    await anime.addUser(user);
 
-// const CreateWatchlist = async (req, res) => {
-//     try {
-//         // let User = User.body
-//         // let Anime = Anime.body 
-//         let newWatchlist = await User.create({
-//           include: [{  
-//               model: Anime,
-//               as: 'watch_list',
-//               through: { attributes: [] }
-//             }
-//           ]
-//         })
-//         res.json(newWatchlist)
-//       } catch (error) {
-//       throw(error)
-//     }
-//   }
+    let watchlist = await User.findById(req.body.userId, {
+      include: [{
+        model: Anime,
+        as: 'anime',
+        attributes: []
+      }]
+    })
+    res.status(201).send(watchlist)
+  } catch (error) {
+    res.status(500).send(error)
+  }
+}
 
-
-
-// const CreateWatchlist = async (req, res) => {
-//   try {
-//      let userId = req.params.userId
-//      let animeId = req.params.animeId
-//      let watchlist = {
-//        userId, animeId,
-//        ...req.body
-//      }
-//      let newWatchlist = await User.create(watchlist
-//       , {
-//       include:[
-//         {
-//           model: Anime, 
-//           as: 'watch_list',
-//           through: { attributes: [] }
-//         }
-//       ] }
-//       )
-//      res.json(newWatchlist)
-//     } catch (error) {
-//     throw(error)
-//   }
-// }
-
-
-    
 
   module.exports = {
       GetLists,
