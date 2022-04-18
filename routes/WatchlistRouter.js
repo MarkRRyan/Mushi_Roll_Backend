@@ -1,8 +1,8 @@
 const Router = require('express').Router()
 const controller = require('../controllers/WatchlistController')
 
-Router.get('/allLists', controller.GetLists)
-// Router.post('/:userId/:animeId', controller.CreateWatchlist)
+Router.get('/', controller.GetWatchlist)
+Router.put('/:title/:user', controller.UpdateWatchlist)
 
 
-module.exports = Router 
+module.exports = Router

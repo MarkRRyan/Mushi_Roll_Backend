@@ -26,14 +26,6 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
-      watcherId: {
-        type: Sequelize.INTEGER,
-        onDelete: 'CASCADE',
-        references: {
-          model: 'users',
-          key: 'id'
-        }
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
