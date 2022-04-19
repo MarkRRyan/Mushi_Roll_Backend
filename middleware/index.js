@@ -6,6 +6,7 @@ const SALT_ROUNDS = parseInt(process.env.SALT_ROUNDS)
 const APP_SECRET = process.env.APP_SECRET
 
 const hashPassword = async (password) => {
+    console.log(password)
     let hashedPassword = await bcrypt.hash(password, SALT_ROUNDS)
     return hashedPassword
 }
@@ -25,9 +26,9 @@ const verifyToken = (req, res, next) => {
     try {
         let payload = jwt.verify(token, APP_SECRET)
         if (payload) {
-            return next()
+           res.locals.payload = payload
+            return next()   
         }
-        res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
     } catch (error) {
         res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
     }
