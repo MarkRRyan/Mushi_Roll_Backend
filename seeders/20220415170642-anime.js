@@ -40,7 +40,7 @@ module.exports = {
       episodes: 64,
       seasons: 1,
       description: 'Brothers Edward and Alphonse Elric search for the Philsophers Stone, hoping to restore their bodies, which were lost when they attempted to use their alchemy skills to resurrect their deceased mother. Edward, who lost only limbs, joins the State Military, which gives him the freedom to continue the search as he tries to restore his brother, whose soul is tethered to earth by a suit of armor. However, Edward and Alphonse are not the only ones seeking the powerful stone. And as they search, they learn of a plot to transmute the entire country for reasons they cannot comprehend.',
-      image: 'https://upload.wikimedia.org/wikipedia/en/7/7e/Fullmetal_Alchemist_Brotherhood_key_visual.png ',
+      image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.mTJzFdfcm7D9eeEcYJXWlAHaKX%26pid%3DApi&f=1 ',
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -49,8 +49,8 @@ module.exports = {
       releaseDate: 'Apr 1 1998',
       episodes: 26,
       seasons: 1,
-      description: 'Vash the Stampede is the man with a $$60,000,000,000 bounty on his head. The reason: hes a merciless villain who lays waste to all those that oppose him and flattens entire cities for fun, garnering him the title "The Humanoid Typhoon." He leaves a trail of death and destruction wherever he goes, and anyone can count themselves dead if they so much as make eye contact—or so the rumors say. In actuality, Vash is a huge softie who claims to have never taken a life and avoids violence at all costs.With his crazy doughnut obsession and buffoonish attitude in tow, Vash traverses the wasteland of the planet Gunsmoke, all the while followed by two insurance agents, Meryl Stryfe and Milly Thompson, who attempt to minimize his impact on the public. But soon, their misadventures evolve into life-or-death situations as a group of legendary assassins are summoned to bring about suffering to the trio. Vashs agonizing past will be unraveled and his morality and principles pushed to the breaking point.',
-      image: 'https://cdn.myanimelist.net/images/anime/7/20310.jpg',
+      description: 'Vash the Stampede is a gunfighter with a legend so ruthless that he has a $$60,000,000,000 bounty on his head. Entire towns evacuate at the rumor of his arrival. However, the real Vash the Stampede is not the same man that rumor portrays him to be. The enigmatic and conflicted lead character in Trigun is actually more heroic in nature; as well as a complete and utter idiot at times. ',
+      image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse3.mm.bing.net%2Fth%3Fid%3DOIP.Sol7lPIfhhMnJzrW68MmHwHaLH%26pid%3DApi&f=1',
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -59,8 +59,8 @@ module.exports = {
       releaseDate: 'Oct 24, 1998',
       episodes: 26,
       seasons: 1,
-      description: 'Crime is timeless. By the year 2071, humanity has expanded across the galaxy, filling the surface of other planets with settlements like those on Earth. These new societies are plagued by murder, drug use, and theft, and intergalactic outlaws are hunted by a growing number of tough bounty hunters.Spike Spiegel and Jet Black pursue criminals throughout space to make a humble living. Beneath his goofy and aloof demeanor, Spike is haunted by the weight of his violent past. Meanwhile, Jet manages his own troubled memories while taking care of Spike and the Bebop, their ship. The duo is joined by the beautiful con artist Faye Valentine, odd child Edward Wong Hau Pepelu Tivrusky IV, and Ein, a bioengineered Welsh Corgi.While developing bonds and working to catch a colorful cast of criminals, the Bebop crews lives are disrupted by a menace from Spikes past. As a rivals maniacal plot continues to unravel, Spike must choose between life with his newfound family or revenge for his old wounds.',
-      image:'https://cdn.myanimelist.net/images/anime/4/19644.jpg',
+      description: 'Crime is timeless. By the year 2071, humanity has expanded across the galaxy, filling the surface of other planets with settlements like those on Earth. These new societies are plagued by murder, drug use, and theft, and intergalactic outlaws are hunted by a growing number of tough bounty hunters.',
+      image:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.7YB0pH4bIh-KsdIIjkukMQHaLH%26pid%3DApi&f=1',
       createdAt: new Date(),
       updatedAt: new Date()
     },
@@ -69,8 +69,8 @@ module.exports = {
       releaseDate: 'Apr 3, 2016',
       episodes: 113,
       seasons: 5,
-      description: 'The appearance of "quirks," newly discovered super powers, has been steadily increasing over the years, with 80 percent of humanity possessing various abilities from manipulation of elements to shapeshifting. This leaves the remainder of the world completely powerless, and Izuku Midoriya is one such individual.Since he was a child, the ambitious middle schooler has wanted nothing more than to be a hero. Izukus unfair fate leaves him admiring heroes and taking notes on them whenever he can. But it seems that his persistence has borne some fruit: Izuku meets the number one hero and his personal idol, All Might. All Mights quirk is a unique ability that can be inherited, and he has chosen Izuku to be his successor!Enduring many months of grueling training, Izuku enrolls in UA High, a prestigious high school famous for its excellent hero training program, and this years freshmen look especially promising. With his bizarre but talented classmates and the looming threat of a villainous organization, Izuku will soon learn what it really means to be a hero.',
-      image: 'https://cdn.myanimelist.net/images/anime/10/78745.jpg',
+      description: `Despite being born powerless into a super-powered world, Izuku refuses to give up on his dream of becoming a hero. He enrolls himself in a prestigious hero academy with a deadly entrance exam. To make the grade, he'll have to put in some serious study time with the mightiest hero of all.`,
+      image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bcPMHHg36EieGOtWnWSxCQHaKe%26pid%3DApi&f=1',
       createdAt: new Date(),
       updatedAt: new Date()
     }
