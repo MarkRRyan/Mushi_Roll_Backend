@@ -39,7 +39,7 @@ const Register = async (req, res) => {
 const CheckSession = async (req, res) => {
     const { payload } = res.locals
     res.send(payload)
-
+}
 
 const UpdatePassword = async (req, res) => {
     try {
@@ -57,8 +57,10 @@ const UpdatePassword = async (req, res) => {
             return res.send({ status: 'Ok', payload: user })
         }
         res.status(401).send({ status: 'Error', msg: 'Unauthorized' })
-    } catch (error) {}
-}
+    } catch (error) {
+
+    }
+} 
 
 
 module.exports = {
