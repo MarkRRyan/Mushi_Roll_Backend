@@ -15,6 +15,6 @@ router.post(
     middleware.stripToken,
     middleware.verifyToken,
     controller.UpdatePassword
-
+)
 
 module.exports = router
