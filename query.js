@@ -54,11 +54,19 @@ const getWatchlist = async () => {
   }
 }
 
+const createWatchlist = async () => {
+  try {
+    const list = await User.Create
+  } catch (error) {
+    
+  }
+}
+
 async function main() {
   try {
     // await userAndAnime()
     // await getAnimeWatchers()
-    await getWatchlist()
+    // await getWatchlist()
   } catch (error) {
     console.log(error)
   } finally {

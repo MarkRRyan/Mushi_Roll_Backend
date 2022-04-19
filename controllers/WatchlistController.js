@@ -22,10 +22,10 @@ const GetWatchlist = async (req, res) => {
 
 const UpdateWatchlist = async (req, res) => {
   try {
-  await Watchlist.create({
-      userId: req.params.user,
-      animeId: req.params.title
-    })
+  await Watchlist.bulkCreate(req.body.data, {
+    fields:["userId", "animeId"]
+  })
+  
     res.send('Watchlist updated with new anime!')
   } catch (error) {
     console.log(error)
