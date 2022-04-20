@@ -4,7 +4,8 @@ const { User } = require('../models')
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    const anime = [{
+    const anime = [
+      {
       title: 'Jujutsu Kaizen',
       releaseDate: 'Oct 2, 2020',
       episodes: 24,
@@ -73,6 +74,58 @@ module.exports = {
       image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.bcPMHHg36EieGOtWnWSxCQHaKe%26pid%3DApi&f=1',
       createdAt: new Date(),
       updatedAt: new Date()
+    },
+    {
+      title: `Dragon Ball`,
+      releaseDate: `Feb 26, 1986`,
+      episodes: 153,
+      seasons: 9,
+      description: `A fateful encounter that would lead to many adventures. The story begins when a then monkey-tailed boy named Son Gokū meets a girl named Bulma. Where years after crash-landing onto the planet Earth is offered the chance to join Bulma in her journey to find all 7 magical Dragon Balls.`,
+      image: `https://www.themoviedb.org/t/p/w1280/tZ0jXOeYBWPZ0OWzUhTlYvMF7YR.jpg`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: `Dragon Ball Z`,
+      releaseDate: `Apr 26, 1989`,
+      episodes: 291,
+      seasons: 9,
+      description:` Dragon Ball Z picks up five years after the end of the Dragon Ball anime, with Goku now a young adult and father to his son, Gohan.. A humanoid alien named Raditz arrives on Earth in a spacecraft and tracks down Goku, revealing to him that he is his long-lost older brother and that they are members of a near-extinct alien warrior race called the Saiyans`,
+      image: `https://www.themoviedb.org/t/p/w1280/6VKOfL6ihwTiB5Vibq6QTfzhxA6.jpg`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+
+    },
+    {
+      title: `Dragon Ball GT`,
+      releaseDate: `Feb 7, 1996`,
+      episodes: 64,
+      seasons: 4,
+      description: `Emperor Pilaf finally has his hands on the Black Star Dragon Balls after years of searching, which are said to be twice as powerful as Earth's normal ones. Pilaf is about to make his wish for world domination when he is interrupted by Gokuu Son. As a result, Pilaf flubs his wish and accidentally turns Gokuu back into a child.`,
+      image: `https://www.themoviedb.org/t/p/w1280/rLHhDpv6rrhuzBjNzaMRNv2fng.jpg`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: `Dragon Ball Super`,
+      releaseDate: `Jul 5, 2015`,
+      episodes: 131,
+      seasons: 5,
+      description: `Six months after the defeat of Majin Buu, The mighty Saiyan Son Goku continues his quest on becoming stronger. With Majin Buu defeated half-a-year prior, peace returns to Earth, where Son Goku (now a radish farmer) and his friends now live peaceful lives. However, a new threat appears in the form of Beerus, the God of Destruction.`,
+      image: `https://cdn.anime-planet.com/anime/primary/dragon-ball-super-1.jpg?t=1625755425`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: `Sailor Moon`,
+      releaseDate: 'Mar 7, 1992',
+      episodes: 200,
+      seasons: 5,
+      description: `The magical action-adventures of a teenage girl who learns of her destiny as the legendary warrior Sailor Moon and must band together with the other Sailor Scouts to defend the Earth and Galaxy. The story centers around an air-headed crybaby, named Usagi, and her friends Ami, Rei, Makato, and Minako.`,
+      image: `https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftalkingcomicbooks.com%2Fwp-content%2Fuploads%2F2014%2F11%2FSailor-Moon-Anime-.jpg&f=1&nofb=1`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+
     }
   ]
     
