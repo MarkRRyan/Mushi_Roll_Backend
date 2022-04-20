@@ -2,8 +2,7 @@
   "development": {
     "database": "Mushi_roll_development",
     "host": "127.0.0.1",
-    "dialect": "postgres",
-    "password": "Pete55"
+    "dialect": "postgres"
   },
   "test": {
     "database": "Mushi_roll_test",
