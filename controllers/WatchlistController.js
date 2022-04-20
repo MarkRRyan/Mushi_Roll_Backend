@@ -22,7 +22,7 @@ const GetWatchlist = async (req, res) => {
 
 const UpdateWatchlist = async (req, res) => {
   try {
-  await Watchlist.bulkCreate(req.body.data, {
+  await Watchlist.bulkCreate(req.body, {
     fields:["userId", "animeId"]
   })
   
