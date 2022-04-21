@@ -1,7 +1,5 @@
 'use strict';
-const {
-  Model
-} = require('sequelize');
+const {Model} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Anime extends Model {
     /**
@@ -10,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Anime.belongsTo(models.User, {
-        as: 'watcher',
-        foreignKey: 'watcherId'
-      })
       Anime.belongsToMany(models.User, {
         through: models.Watchlist,
         as: 'anime',
@@ -27,8 +21,7 @@ module.exports = (sequelize, DataTypes) => {
     episodes: DataTypes.INTEGER,
     seasons: DataTypes.INTEGER,
     description: DataTypes.TEXT,
-    image: DataTypes.STRING,
-    watcherId: DataTypes.INTEGER
+    image: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Anime',

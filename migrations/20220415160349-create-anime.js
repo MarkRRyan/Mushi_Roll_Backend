@@ -26,9 +26,6 @@ module.exports = {
       image: {
         type: Sequelize.STRING
       },
-      watcherId: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

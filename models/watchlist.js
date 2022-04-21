@@ -14,8 +14,22 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Watchlist.init({
-    watcherId: DataTypes.INTEGER,
-    animeId: DataTypes.INTEGER
+    userId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
+    animeId: {
+      type: DataTypes.INTEGER,
+      onDelete: 'CASCADE',
+      references: {
+        model: 'anime',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'Watchlist',
@@ -23,3 +37,4 @@ module.exports = (sequelize, DataTypes) => {
   });
   return Watchlist;
 };
+
