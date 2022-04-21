@@ -125,7 +125,86 @@ module.exports = {
       image: `https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Ftalkingcomicbooks.com%2Fwp-content%2Fuploads%2F2014%2F11%2FSailor-Moon-Anime-.jpg&f=1&nofb=1`,
       createdAt: new Date(),
       updatedAt: new Date()
-
+    },
+    {
+      title: `With a Dog AND a Cat, Every Day is Fun`,
+      releaseDate: 'Oct 2, 2020',
+      episodes: 24,
+      seasons: 1,
+      description:`A hard-working way-too-cute dog and a scary-faced but lovable cat. Living with them makes every day fun. Their owner's days are filled with laughter and sentiment. Are you a cat-lover? A dog-lover? Or both? This anime is a present for the people out there who love both dogs and cats so much they can't choose.`,
+      image: `https://cdn.anime-planet.com/anime/primary/with-a-dog-and-a-cat-every-day-is-fun-1.jpg?t=1625788742`,
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Neon Genesis Evangelion',
+      releaseDate: 'Oct 4, 1995',
+      episodes: 26,
+      seasons: 1,
+      description: `Evangelion is a giant humanoid being of near-godlike power, created by NERV from samples of the First Angel, Adam. Evangelions were supposedly created to combat the Angel threat, although their most important function (and one of their greatest secrets) is to initiate Third Impact to evolve humanity further. `,
+      image: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.EI6wUWODAFqi-asmCU3lxAHaKj%26pid%3DApi&f=1',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'FLCL',
+      releaseDate: 'Apr 26, 2000',
+      episodes: 18,
+      seasons: 3,
+      description: `Naota Nandaba is an ordinary sixth grader living in a city where nothing amazing ever seems to happen. After his brother Tasuku leaves town to play baseball in America, Naota takes it upon himself to look after everything Tasuku left behind—from his top bunk bed to his ex-girlfriend Mamimi Samejima, who hasn't stopped clinging to Naota since Tasuku left. `,
+      image:'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2Fb0%2Fb2%2F4a%2Fb0b24a3e84b481e3efc095e7e4b69a53.jpg&f=1&nofb=1',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Log Horizon',
+      releaseDate: 'Oct 5, 2013',
+      episodes: 25,
+      seasons: 1,
+      description: `In the blink of an eye, thirty thousand bewildered Japanese gamers are whisked from their everyday lives into the world of the popular MMORPG, Elder Tale, after the game's latest update—unable to log out. Among them is the socially awkward college student Shiroe, whose confusion and shock lasts only a moment as, a veteran of the game, he immediately sets out to explore the limits of his new reality.`,
+      image:'https://m.media-amazon.com/images/M/MV5BOGJhM2U4NTgtMWI0ZC00Njc5LWJmMjktMzQzMDgzZTIzMzI0L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_.jpg',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Inuyasha',
+      releaseDate: 'Oct, 16, 2000',
+      episodes: 167,
+      seasons: 7,
+      description: `InuYasha follows Kagome Higurashi, a fifteen-year-old girl whose normal life ends when a demon drags her into a cursed well on the grounds of her family's Shinto shrine. Instead of hitting the bottom of the well, Kagome ends up 500 years in the past during Japan's violent Sengoku period with the demon's true target, a wish-granting jewel called the Shikon Jewel, reborn inside of her.`,
+      image:'https://i.ebayimg.com/images/i/151204248887-0-1/s-l1000.jpg',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Death Parade',
+      releaseDate: 'Jan 9, 2015',
+      episodes: 12,
+      seasons: 1,
+      description: `After death, either Heaven or Hell awaits most humans. But for a select few, death brings them to Quindecim—a bar where only pairs of people who die at the same time can enter. Attending the bar is an enigmatic figure known as Decim, who also acts as the arbiter. He passes judgment on those who wind up at Quindecim by challenging them to a life-threatening game. These games determine if the patron's soul will reincarnate into a new life, or be sent into the void, never to be seen again.`,
+      image:'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fpm1.narvii.com%2F5681%2Fc59de09a940feda4ab625bc623002a660bfde184_hq.jpg&f=1&nofb=1',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Noragami',
+      releaseDate: 'Jan 5, 2014',
+      episodes: 12,
+      seasons: 1,
+      description: `In times of need, if you look in the right place, you just may see a strange telephone number scrawled in red. If you call this number, you will hear a young man introduce himself as the Yato God.`,
+      image:'https://img.moviesrankings.com/t/p/w1280/5VfXMChjnJsiRJM0FC5KBncccD2.jpg',
+      createdAt: new Date(),
+      updatedAt: new Date()
+    },
+    {
+      title: 'Death Note',
+      releaseDate: 'Oct 4, 2006',
+      episodes: 37,
+      seasons: 1,
+      description: `Brutal murders, petty thefts, and senseless violence pollute the human world. In contrast, the realm of death gods is a humdrum, unchanging gambling den. The ingenious 17-year-old Japanese student Light Yagami and sadistic god of death Ryuk share one belief: their worlds are rotten.`,
+      image: 'https://vignette.wikia.nocookie.net/deathnote/images/7/76/DEATH_NOTE_anime.jpg/revision/latest?cb=20170720215429',
+      createdAt: new Date(),
+      updatedAt: new Date()
     }
   ]
     
