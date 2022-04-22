@@ -12,7 +12,7 @@
 [Ethan's Github 🧟](https://github.com/etnitz) | [Michelle's Github 🐮](https://github.com/Michelleflo55) | [Mark's Github 
 🦆](https://github.com/DerWindFish/) | [Nell's Github 🌻](https://github.com/nell-djmf)
 ***
-Welcome to the backend server for Mushi Roll! We used PostgreSQL, Sequelize, and Express for our database. For authentication, we utilized JWT and [bcrypt](https://github.com/pyca/bcrypt) for password hashing.
+Welcome to the backend server for Mushi Roll! We used PostgreSQL, Sequelize, and Express for our database, and hosted it on Heroku. For authentication, we utilized JWT and [bcrypt](https://github.com/pyca/bcrypt) for password hashing. 
 ***
 ## Diagrams
 
